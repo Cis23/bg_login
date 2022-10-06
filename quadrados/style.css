@@ -4,92 +4,32 @@
   box-sizing: border-box;
 }
 body{
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   height: 100vw;
   width: 100%;
   overflow: hidden;
 }
-.container{
-  position: relative;
-  width: 80%;
-  border: 1px solid red;
-}
-.ulX li{
-  width: 100vw;
-  height: 3px;
+
+.squares li {
   list-style: none;
-  /* display: block; */
-  margin: 20px;
-}
-.ulX li{
-  animation: upX 3s infinite alternate;
-}
-.ulY li{
-  margin: 20px;
-  width: 3px;
-  height: 80vh;
-  list-style: none;
-  float: left;
-  animation: upY 3s infinite alternate;
-  /* transform: translateY(-100px) */
-}
-.ulY::after{
-  content: "";
-  display: block;
-}
-ul{
+  width: 40px;
+  height: 40px;
+  background-color: rgba(102, 102, 102, 0.288);
   position: absolute;
+  bottom: -40px;
+  animation: up 2s infinite;
+  animation-direction: alternate;
 }
-.ulX{
-  display: flex;
-  flex-direction: column ;
-  justify-content: center;
-  align-items: center;
-}
-.ulY{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-/* .container{
-  margin: auto;
-  position: relative;
-  width: 80%;
-} */
-@keyframes upX{
+@keyframes up {
   from{
-    opacity: .4;
-    transform: translateX(-1500px);
+    transform: translateY(0);
+    opacity: 0;
   }
   50%{
-    opacity: 0.7;
+    opacity: 1;
   }
-  70%{
-    opacity: 0.7;
-  }
-  to {
+  to{
+    transform: translateY(-1200px) rotate(-950deg); 
     opacity: .4;
-    transform: translateX(100vw) ;
-  }
-}
-@keyframes upY{
-  from{
-    opacity: .4;
-    transform: translateY(-1000px);
-  }
-  50%{
-    opacity: 0.7;
-  }
-  70%{
-    opacity: 0.7;
-  }
-  to {
-    opacity: .4;
-    transform: translateY(150vh) ;
-    background: red;
   }
 }
