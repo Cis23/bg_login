@@ -22,13 +22,13 @@ body{
   list-style: none;
   background-color: red;
   margin: 5px;
-  animation-direction: alternate;
+  transition: all 2s ease-out;
 }
 .lines_y li {
-  /* margin: 20px; */
-  height: 70vh;
+  height: 90vh;
   width: 3px;
   animation: upY .1s infinite;
+  animation-direction: alternate;
 }
 .lines_x{
   flex-direction: column;
@@ -39,10 +39,12 @@ body{
   transform: translateX(-50%);
 }
 .lines_x li {
+  gap: 10px;
   width: 90vw;
   height: 3px;
-  margin: 20px;
+  /* margin: 10px; */
   animation: upX 2s infinite;
+  animation-direction: alternate;
 }
 @keyframes upY {
   from{
