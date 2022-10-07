@@ -49,7 +49,7 @@ body{
 @keyframes upY {
   from{
     transform: translateY(0);
-    opacity: 0;
+    opacity: .4;
   }
   50%{
     opacity: 1;
@@ -62,7 +62,7 @@ body{
 @keyframes upX {
   from{
     transform: translateX(0);
-    opacity: 0;
+    opacity: .4;
   }
   50%{
     opacity: 1;

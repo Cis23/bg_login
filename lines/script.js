@@ -9,8 +9,8 @@ for(let i = 0; i < 100; i++){
 
   const delay = random(3,0.1)
   const duration = random(10,5)
-  const height = random(90,20)
-  const width = random(90,20)
+  const height = random(90,10)
+  const width = random(90,10)
 
   liY.style.height = `${height}vh`
   liY.style.backgroundColor = randomColors[Math.floor(Math.random() * 8)]
