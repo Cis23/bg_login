@@ -1,30 +1,30 @@
-const ulY = document.querySelector("ul.lines_y");
-const ulX = document.querySelector("ul.lines_x");
+const ulY = document.querySelector(".lines_y");
+const ulX = document.querySelector(".lines_x");
 
-const randomColors = ["blue","yellow","green","grey","white","red","pink"]
+const randomColors = ["#283171","yellow","green","grey","white","red","pink"]
 const randomLinearGradientX = [
-  "linear-gradient(to left, #e66465, #9198e5)",
-  "linear-gradient(to left, #eee341, #e66465)",
-  "linear-gradient(to left, #9198e5, #e66465)",
-  "linear-gradient(to left, red, yellow)",
+  "linear-gradient(to left, #283171, #ffffff)",
+  "linear-gradient(to left, #ffffff, #283171)",
+  "linear-gradient(to left, #9198e5, #ffffff)"
 ]
 const randomLinearGradientY = [
-  "linear-gradient(#e66465, #9198e5)",
-  "linear-gradient(#eee341, #e66465)",
-  "linear-gradient(#9198e5, #e66465)",
-  "linear-gradient(red, yellow)",
+  "linear-gradient(#283171, #ffffff)",
+  "linear-gradient(#ffffff, #283171)",
+  "linear-gradient(#9198e5, #ffffff)"
 ]
-for(let i = 0; i < 100; i++){
+
+
+for(let i = 0; i < 20; i++){
   const random = (max,min) => Math.random() * (max - min) + min;
   const liY = document.createElement("li");
   const liX = document.createElement("li");
 
   const delay = random(2,0.1)
-  const duration = random(5,2)
+  const duration = random(20,10)
   const height = random(90,10)
   const width = random(90,10)
-  const bg_y = randomLinearGradientY[Math.floor(Math.random() * 4)]
-  const bg_x = randomLinearGradientX[Math.floor(Math.random() * 4)]
+  const bg_y = randomLinearGradientY[Math.floor(Math.random() * 3)]
+  const bg_x = randomLinearGradientX[Math.floor(Math.random() * 3)]
 
   liY.style.height = `${height}vh`
   liY.style.background = bg_y
@@ -44,6 +44,10 @@ for(let i = 0; i < 100; i++){
   ulX.appendChild(liX);
   ulY.appendChild(liY);
 }
+
+
+//---------------------------------------------------------------------------------- 
+
 const body = document.querySelector("body");
 const styleBody = getComputedStyle(body)
 const btn = document.querySelector("#btn"); 
